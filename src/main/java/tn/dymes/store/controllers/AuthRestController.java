@@ -108,7 +108,7 @@ public class AuthRestController {
     JwtDecoder jwtDecoder;
 
 
-    @GetMapping("/messageTest")
+    @GetMapping("/public/messageTest")
    // @PreAuthorize("hasAuthority('SCOPE_USER')")
     public Map<String, Object> messageTest(){
         return Map.of("message","Hello From");
