@@ -58,16 +58,6 @@ public class SecurityConfig implements WebMvcConfigurer {
         return new ProviderManager(daoAuthenticationProvider);
     }
 
-
-   /* @Bean
-    public UserDetailsService userDetailsService(){
-        return new InMemoryUserDetailsManager(
-                User.withUsername("user1@gmail.com").password(passwordEncoder().encode("1234")).authorities("USER").build(),
-                User.withUsername("user2@gmail.com").password(passwordEncoder().encode("1234")).authorities("USER").build(),
-                User.withUsername("admin@dymes.tn").password(passwordEncoder().encode("1234")).authorities("USER","ADMIN").build()
-        );
-    } */
-
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception{
         return httpSecurity
